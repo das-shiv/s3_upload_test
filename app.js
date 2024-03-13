@@ -4,8 +4,8 @@ const path = require('path');
 
 // Configure AWS with your accessKeyId and secretAccessKey
 const s3 = new AWS.S3({
-  accessKeyId: "accesskey",
-  secretAccessKey: "accesskeyid"
+  accessKeyId: "accesskeyid",
+  secretAccessKey: "accesskey"
 });
 
 // Function to upload a file from "uploads" folder to AWS S3 bucket
@@ -19,7 +19,7 @@ const uploadFileToS3 = (filePath) => {
       }
       
       const params = {
-        Bucket: 'bucketname',
+        Bucket: 'bucket-name',
         Key: fileName, // Use the file name as the key in S3
         Body: data
       };
